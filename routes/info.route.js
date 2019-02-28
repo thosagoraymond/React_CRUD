@@ -3,7 +3,6 @@ const router = require('express').Router();
 
 //Creating a POST endpoint
 router.post('/api/info', (req, res) => {
-    console.log(req.statusCode)
     let new_info = new Adverts({
         username: req.body.username,
         surname: req.body.surname,

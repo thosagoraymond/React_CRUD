@@ -4,6 +4,7 @@ cors = require('cors'),
 mongoose = require('mongoose'),
 secret = require('./config/secret'),
 path = require('path');
+var bodyParser = require('body-parser');
 
 const app = express();
 
@@ -15,6 +16,8 @@ mongoose.connect(secret.database,{ useNewUrlParser: true }, (err)=>{
 });
 
 app.use(morgan('dev'));
+app.use(bodyParser.json({limit: '200mb'}));
+app.use(bodyParser.urlencoded({ extended: true, limit: '200mb', parameterLimit: 100000}));
 
 // Routes
 var infoRoutes = require('./routes/info.route');
