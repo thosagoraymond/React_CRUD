@@ -1,0 +1,21 @@
+{
+  "name": "crud-contacts",
+  "version": "1.0.0",
+  "description": "Simple application to CRUD user details.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Mogodi Raymond",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.16",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.10",
+    "path": "^0.12.7",
+    "secret": "^1.0.2"
+  }
+}
