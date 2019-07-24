@@ -18,6 +18,7 @@ mongoose.connect(secret.database,{ useNewUrlParser: true }, (err)=>{
 app.use(morgan('dev'));
 app.use(bodyParser.json({limit: '200mb'}));
 app.use(bodyParser.urlencoded({ extended: true, limit: '200mb', parameterLimit: 100000}));
+app.use(cors({origin: ["http://localhost:3000", "http://localhost:3001"], credentials: true}));
 
 // Routes
 var infoRoutes = require('./routes/info.route');

@@ -9,7 +9,7 @@ router.post('/api/info', (req, res) => {
         email: req.body.email,
         phone: req.body.phone,
     });
-console.log(new_info);
+    
     new_info.save(err=>{
         if(err){
             console.log("Error is ",err)
